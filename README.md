@@ -123,6 +123,13 @@ If you discover any security related issues, please email
 This project is maintained by [Srinivas](
 [github.com](github.com/Srinivas1109) ).
 
+## Limitations
+
+* This project is not yet completed.
+* This project currently supports only for .pdf files.
+
+
+
 
 
 
