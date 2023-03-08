@@ -2,6 +2,15 @@
 
 This is a project created using Node.js, Express.js and React.js to merge multiple files into a single file.
 
+## Features
+
+* Merge multiple files into a single file.
+* Drag and drop the files to merge.
+* Selected files are displayed in a row.
+* Selected files can be rearranged.
+* Delete the selected files individually or all at once.
+* Download the merged file.
+
 ## Getting Started
 
 To get started with this project, follow the instructions below:
