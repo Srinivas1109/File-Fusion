@@ -6,9 +6,11 @@ const cors = require("cors");
 const app = express();
 const { mergePDFs } = require("./src/MergePDFs");
 
+const PORT = process.env.PORT || 5000;
+
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "*",
     credentials: true,
   })
 );
@@ -49,6 +51,9 @@ app.post("/merge", upload.array("files"), async (req, res) => {
           const file = files[index];
           fs.unlinkSync(file);
         }
+
+        // delete the merged file
+        fs.unlinkSync(path.join(__dirname, `results/${downloadFile}`));
       }else{
         res.json({ error: err });
       }
@@ -58,6 +63,6 @@ app.post("/merge", upload.array("files"), async (req, res) => {
   }
 });
 
-app.listen(5000, () => {
-  console.log("Server is listening on http://localhost:5000");
+app.listen(PORT, () => {
+  console.log(`Server is listening on http://localhost:${PORT}`);
 });

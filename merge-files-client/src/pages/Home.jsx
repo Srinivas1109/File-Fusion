@@ -124,7 +124,6 @@ function Home({ fileType }) {
         />
       </div>
       <div className="file-list-container">
-        {console.log(mergedFileUrl)}
         <h2 className="selected-files-count">
         <i className="fa fa-file-text-o "></i> {files.length} files selected <span className="file-type-info">{`( ${fileType} )`}</span> <br/>
           {files.length > 0 && "Drag and drop to reorder the files..."}

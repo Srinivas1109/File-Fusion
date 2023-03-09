@@ -39,6 +39,10 @@
   font-size: 1.3rem;
 }
 
+.nav-links li .block-cursor{
+  cursor: not-allowed;
+}
+
 .dropdown {
   position: relative;
 }
